@@ -8,11 +8,12 @@ export default {
         <p class="new-message">
             <span>{{msg.message.name}} says:</span>
             {{msg.message.content}}
-        </p>
+        </p>    
     `,
 
     data: function() {
-        //nothing here yet, but there will be
-        return { message: "yadayadayada" }
+        //nothin here yet, but there will be
+        return {message: "howdy do"}
     }
+
 }
