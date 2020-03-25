@@ -4,29 +4,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Socket IO Chat with Node!</title>
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
+	<!-- Vue -->
 	<script src="https://unpkg.com/vue"></script>
+	<!-- fonts -->
+	<link rel="stylesheet" href="https://use.typekit.net/djm0nns.css">
+	<!-- Favicon -->
 </head>
 
 <body>
 	<main id="app">
-		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-
-			<form>
-				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input @click.prevent="dispatchMessage" type="submit">
-			</form>
-		</section>
-
+		<!-- received messages section -->
 		<section class="messages">
+			<h1 class="hidden">Your received messages are here.</h1>
 			<ul id="messages" v-for="message in messages">
 				<!-- render a new message component for every message -->
 				<newmessage :msg="message"></newmessage>
 			</ul>
 		</section>
+
+		<!-- write your message section -->
+		<section class="form-container">
+			<h1 class="hidden">Write and send your message here.</h1>
+			<label for="nickName"></label>
+			<input type="text" id="nickName" class="nickName" placeholder="nickname (optional)">
+
+			<form>
+				<label for="message"></label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="message"></textarea>
+				<input @click.prevent="dispatchMessage" type="submit">
+			</form>
+		</section>
+
+		
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
