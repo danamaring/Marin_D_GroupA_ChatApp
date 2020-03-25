@@ -1,9 +1,19 @@
+@import 'modules/_vars';
+
+
 .new-message { 
-    span { font-size: 0.8rem; display: block; margin-bottom: 2px; }
+    span { 
+        font-size: 0.8rem; 
+        display: block; 
+        margin-bottom: 2px; 
+        color: rgba(0, 0, 0, 0.521);
+    }
 
     width: 45%;
     padding: 8px 12px;
-    background-color: white; 
+    background-color: $light-grey; 
+    font-family: $main;
+    color: white;
     border-radius: 8px;
     margin-bottom: 1rem;
 
@@ -13,6 +23,8 @@
 
 .my-message {
     float: right !important;
-    background-color: #86bf9d;
+    background: rgb(238,9,121);
+	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%);
     color: white;
+    font-family: $main;
 }
