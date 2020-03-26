@@ -1,0 +1,37 @@
+@import 'modules/_vars';
+
+//show popup when loading the page by default 
+#popupShow {
+    display: flex;
+    padding-top: 30%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(238,9,121);
+	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%);
+}
+
+//hide popup when user clicks the button
+.popupHide {
+    display: none !important;
+}
+
+//username field
+#username {
+    height: 50px;
+    width: 30%;
+    margin-right: 2%;
+    margin-left: 29%;
+    font-size: 1.1em;
+}
+
+//username submit button
+
+#usernameSubmit {
+    height: 50px;
+    width: 10%;
+    background-color: white;
+    color: $black;
+    font-size: 1.1em;
+    cursor: pointer;
+}
