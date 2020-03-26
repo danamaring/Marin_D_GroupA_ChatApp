@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<!-- Vue -->
 	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vue@2.5.3/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 	<!-- GreenSock -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 	<!-- fonts -->
@@ -19,10 +21,11 @@
 <body>
 	<main id="app">
 		<!-- pick your username -->
-		<section id="popup">
+		<section id="popupShow" v-if="!isHidden">
 			<h1 class="hidden">Pick your username</h1>
 			<input v-model="username" type="text" id="username" class="username" placeholder="pick a username">
-			<input @click.prevent="dispatchUsername" type="submit">
+			<input @click="dispatchUsername" v-on:click="isHidden = true" id="usernameSubmit" type="submit">
+	
 		</section>
 		<!-- received messages section -->
 		<section class="messages">

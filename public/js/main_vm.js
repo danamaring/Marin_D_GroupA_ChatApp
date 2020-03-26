@@ -2,6 +2,15 @@
 import ChatMessage from "./modules/ChatMessage.js";
 
 const socket = io();
+    //   popUp = document.querySelector('.popUp'),
+    //   closePopUp = document.querySelector('.popupShow'),
+    //   usernameSubmit = document.querySelector('#usernameSubmit');
+
+// function hidePopUp(){
+//     // event.preventDefault();
+//     popUp.classList.add('popupHide');
+// }
+
 
 function setUserId({sID, message}) {
     //debugger;
@@ -19,13 +28,15 @@ function appendNewMessage(msg) {
     vm.messages.push(msg);
 }
 
+
 // this is our main Vue instance
 const vm = new Vue({
     data: {
         socketID: "",      
         messages: [],
         message: "",
-        username: ""
+        username: "",
+        isHidden: false
     },
 
     methods: {
@@ -34,7 +45,6 @@ const vm = new Vue({
             // socket.emit('chat_username', {
             //     name: this.nickName || "anonymous"
             // })
-
         },
 
         dispatchMessage() {
@@ -69,3 +79,4 @@ const vm = new Vue({
 socket.addEventListener('connected', setUserId);
 socket.addEventListener('user_disconnect', runDisconnectMessage);
 socket.addEventListener('new_message', appendNewMessage);
+// usernameSubmit.addEventListener("click", hidePopUp);
