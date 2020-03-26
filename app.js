@@ -29,7 +29,7 @@ io.on('connection', function(socket) {
 
     // listen for an incoming message from a user (socket refers to an individual user)
     // msg is the incoming message from that user
-    socket.on('chat_username', 'chat_message', function(msg) {
+    socket.on('chat_message', function(msg) {
         console.log(msg);
 
         // when we get a new message, send it to everyone so they see it
