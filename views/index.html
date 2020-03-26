@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Socket IO Chat with Node!</title>
+	<title>ChatApp</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	<!-- Vue -->
@@ -15,6 +15,8 @@
 	<!-- fonts -->
 	<link rel="stylesheet" href="https://use.typekit.net/djm0nns.css">
 	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="images/logo-chatApp.png">
+
 	
 </head>
 
@@ -42,7 +44,8 @@
 			<form>
 				<label for="message"></label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="message"></textarea>
-				<input @click.prevent="dispatchMessage" type="submit">
+				<!-- <input @click.prevent="dispatchMessage" type="submit"> -->
+				<button @click.prevent="dispatchMessage">Send</button>
 			</form>
 		</section>
 

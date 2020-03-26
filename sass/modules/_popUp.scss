@@ -3,7 +3,8 @@
 //show popup when loading the page by default 
 #popupShow {
     display: flex;
-    padding-top: 30%;
+    flex-direction: column;
+    padding-top: 60%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -18,20 +19,85 @@
 
 //username field
 #username {
-    height: 50px;
-    width: 30%;
+    height: 150px;
+    width: 80%;
+    border-radius: 35px;
     margin-right: 2%;
-    margin-left: 29%;
-    font-size: 1.1em;
+    margin-left: 10%;
+    padding: 1.4rem;
+    font-size: 2.5em;
 }
 
 //username submit button
 
 #usernameSubmit {
-    height: 50px;
-    width: 10%;
-    background-color: white;
-    color: $black;
-    font-size: 1.1em;
+    height: 110px;
+    width: 30%;
+    background-color: $black;
+    border-radius: 35px;
+    color: $orange;
+    font-size: 2.5em;
     cursor: pointer;
+    margin-left: 35%;
+    margin-top: 5%;
 }
+
+//media query 667px ---TABLET---
+@media screen and (min-width: 41.6875em) {
+    #popupShow {
+        padding-top: 15%;
+    }
+
+    #username {
+        height: 25%;
+    }
+}
+
+//media query 768px ---TABLET---
+@media screen and (min-width: 48em) {
+    #popupShow {
+        padding-top: 25%;
+    }
+
+    #username {
+        height: 10%;
+    }
+
+    // button {
+    //     height: 7%;
+    // }
+}
+
+ //media query 1024px ---TABLET---
+ @media screen and (min-width: 64em) {
+     #popupShow {
+         flex-direction: row;
+         padding-top: 30%;
+     }
+
+    #username {
+        font-size: 1.5em;
+        height: 12%;
+        width: 55%;
+    }
+
+    #usernameSubmit {
+        height: 12%;
+        font-size: 1.5em;
+        width: 20%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+ }
+
+  //media query 1565px ---LARGE DESKTOP---
+  @media screen and (min-width: 97.8125em) {
+    #username {
+        width: 40%;
+        margin-left: 24%;
+    }
+
+    #usernameSubmit {
+        width: 10%;
+    }
+  }
