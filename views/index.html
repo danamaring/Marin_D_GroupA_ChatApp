@@ -42,7 +42,8 @@
 			<form>
 				<label for="message"></label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="message"></textarea>
-				<input @click.prevent="dispatchMessage" type="submit">
+				<!-- <input @click.prevent="dispatchMessage" type="submit"> -->
+				<button @click.prevent="dispatchMessage">Send</button>
 			</form>
 		</section>
 

@@ -3,7 +3,7 @@
 
 .new-message { 
     span { 
-        font-size: 0.8rem; 
+        font-size: 0.8em; 
         display: block; 
         margin-bottom: 2px; 
         color: rgba(0, 0, 0, 0.521);
@@ -14,8 +14,9 @@
     background-color: $light-grey; 
     font-family: $main;
     color: white;
-    border-radius: 8px;
+    border-radius: 15px;
     margin-bottom: 1rem;
+    font-size: 2em;
 
     float:left;
     clear: both;
@@ -27,4 +28,16 @@
 	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%);
     color: white;
     font-family: $main;
+}
+
+//send button
+button {
+    background-color: $black;
+    color: $orange;
+    font-family: $main;
+    font-size: 2em;
+    padding: 5px;
+    width: 15%;
+    border-radius: 35px;
+    border: none;
 }

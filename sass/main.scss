@@ -28,6 +28,7 @@ main {
 	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%);
 	display: flex;
 	flex-direction: row;
+	height: 10%;
 
 	label { display: block; margin-bottom: 0.5rem; }
 }
@@ -59,25 +60,25 @@ input::placeholder {
 }
 
 textarea { 
-	height: 45px; 
+	height: 4em; 
 	display: block; 
 	width: 80%;
-	border-radius: 12px; 
-	font-size: 0.8rem; 
-	padding: 0.4rem; 
+	border-radius: 35px; 
+	font-size: 2em; 
+	padding: 1em; 
 	border: none;
 	color: white;
 	font-family: $main;
 	background-color: $black;
-	margin-right: 5%;
+	margin-right: 4%;
 	resize: none;
 }
 
 textarea::placeholder {
 	color: $light-grey;
 	font-family: $main;
-	padding-left: 5px;
-	font-size: 1.15em;
+	padding-left: 1em;
+	font-size: 1em;
 	padding-top: 5px;
 }
 
@@ -91,9 +92,9 @@ form {
 	input[type=submit] { 
 		width: 10%; 
 		padding: 10px; 
-		background-color: white;
+		background-color: $black;
 		border-radius: 12px;
-		color: $black;
+		color: $orange;
 		font-family: $main;
 		cursor: pointer;
 		font-weight: 500;
