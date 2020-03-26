@@ -29,12 +29,13 @@ io.on('connection', function(socket) {
 
     // listen for an incoming message from a user (socket refers to an individual user)
     // msg is the incoming message from that user
-    socket.on('chat_message', function(msg) {
+    socket.on('chat_username', 'chat_message', function(msg) {
         console.log(msg);
 
         // when we get a new message, send it to everyone so they see it
         // io is the switchboard operator, making sure everyone who's connected
         // gets the messages
+        io.emit('new_username', { id: socket.id, username: msg })
         io.emit('new_message', { id: socket.id, message: msg })
     })
 

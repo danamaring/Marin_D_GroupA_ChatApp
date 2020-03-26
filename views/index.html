@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<!-- Vue -->
 	<script src="https://unpkg.com/vue"></script>
+	<!-- GreenSock -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 	<!-- fonts -->
 	<link rel="stylesheet" href="https://use.typekit.net/djm0nns.css">
 	<!-- Favicon -->
@@ -15,20 +17,23 @@
 
 <body>
 	<main id="app">
+		<!-- pick your username -->
+		<section id="popup">
+			<h1 class="hidden">Pick your username</h1>
+			<input v-model="username" type="text" id="username" class="username" placeholder="pick a username">
+			<input @click.prevent="dispatchUsername" type="submit">
+		</section>
 		<!-- received messages section -->
 		<section class="messages">
 			<h1 class="hidden">Your received messages are here.</h1>
-			<ul id="messages" v-for="message in messages">
-				<!-- render a new message component for every message -->
-				<newmessage :msg="message"></newmessage>
-			</ul>
+				<ul id="messages" v-for="message in messages">
+					<!-- render a new message component for every message -->
+					<newmessage :msg="message"></newmessage>
+				</ul>
 		</section>
-
 		<!-- write your message section -->
 		<section class="form-container">
 			<h1 class="hidden">Write and send your message here.</h1>
-			<label for="nickName"></label>
-			<input type="text" id="nickName" class="nickName" placeholder="nickname (optional)">
 
 			<form>
 				<label for="message"></label>
