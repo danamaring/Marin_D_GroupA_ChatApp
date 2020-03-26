@@ -116,5 +116,56 @@ form {
 	display: none;
 }
 
+ //media query 768px ---TABLET---
+ @media screen and (min-width: 48em) {
+	.form-container {
+		height: 13%;
+	}
+ }
+
+ //media query 1024px ---TABLET---
+ @media screen and (min-width: 64em) {
+	textarea {
+		height: 3em;
+		font-size: 1.3em;
+		padding: 0.5em;
+		margin-right: 4%;
+		padding-left: 2%;
+	}
+
+	textarea::placeholder {
+		font-size: 1.3em;
+		padding: 1%;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.new-message {
+		span {
+			font-size: 0.5em;
+		}
+
+		font-size: 1.3em;
+	}
+ }
+ 
+
+//media query 1565px ---LARGE DESKTOP---
+	@media screen and (min-width: 97.8125em) {
+	textarea {
+		font-size: 1em;
+	}
+
+	.form-container {
+		height: 9%;
+	}
+
+	.new-message {
+		span {
+			font-size: 0.7em;
+		}
+	}
+
+}
 
 

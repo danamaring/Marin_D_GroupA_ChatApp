@@ -40,4 +40,20 @@ button {
     width: 15%;
     border-radius: 35px;
     border: none;
+    height: 4em;
+}
+
+//media query 1024px ---TABLET---
+@media screen and (min-width: 64em) {
+    button {
+		font-size: 1.5em;
+		cursor: pointer;
+	}
+}
+
+//media query 1565px ---LARGE DESKTOP---
+@media screen and (min-width: 97.8125em) {
+    button {
+		font-size: 1em;
+	}
 }
