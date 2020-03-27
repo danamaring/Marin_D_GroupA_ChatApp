@@ -17,6 +17,7 @@
     border-radius: 15px;
     margin-bottom: 1rem;
     font-size: 2em;
+    animation: bounceIn 0.5s;
 
     float:left;
     clear: both;
@@ -28,6 +29,7 @@
 	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%);
     color: white;
     font-family: $main;
+    animation: bounceIn 0.5s;
 }
 
 //send button
@@ -42,6 +44,10 @@ button {
     border: none;
     height: 4em;
 }
+
+// button:hover {
+//     animation: bounceIn 5s;
+// }
 
 //media query 1024px ---TABLET---
 @media screen and (min-width: 64em) {
@@ -58,3 +64,20 @@ button {
 		font-size: 1em;
 	}
 }
+
+//keyframe animation
+@keyframes bounceIn {
+0% {
+    transform: scale(0.1);
+    opacity: 0;
+}
+60% {
+    transform: scale(1.2);
+    opacity: 1;
+}
+100% {
+    transform: scale(1);
+}
+}
+
+  
