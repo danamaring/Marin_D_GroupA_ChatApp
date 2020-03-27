@@ -7,7 +7,7 @@
     padding-top: 60%;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110%;
     background: rgb(238,9,121);
 	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%);
 }
@@ -19,7 +19,7 @@
 
 //username field
 #username {
-    height: 150px;
+    height: 110px;
     width: 80%;
     border-radius: 35px;
     margin-right: 2%;
@@ -49,7 +49,7 @@
     }
 
     #username {
-        height: 25%;
+        height: 110px;
     }
 }
 
@@ -60,7 +60,7 @@
     }
 
     #username {
-        height: 10%;
+        height: 110px;
     }
 
     // button {
@@ -77,12 +77,12 @@
 
     #username {
         font-size: 1.5em;
-        height: 12%;
+        height: 60px;
         width: 55%;
     }
 
     #usernameSubmit {
-        height: 12%;
+        height: 60px;
         font-size: 1.5em;
         width: 20%;
         margin-left: 0;
@@ -92,6 +92,10 @@
 
   //media query 1565px ---LARGE DESKTOP---
   @media screen and (min-width: 97.8125em) {
+    #popupShow {
+        padding-top: 25%;
+    }
+    
     #username {
         width: 40%;
         margin-left: 24%;
